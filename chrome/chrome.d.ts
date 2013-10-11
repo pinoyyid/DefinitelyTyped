@@ -1061,7 +1061,7 @@ declare module chrome.history {
 // Identity
 ////////////////////
 declare module chrome.identity {
-    var getAuthToken: (options:{}, cb:(token:{})=>void)=>void;
+    var getAuthToken: (options:all, cb:(token:{})=>void)=>void;
 }
 
 
@@ -1350,7 +1350,7 @@ declare module chrome.pageCapture {
         tabId: number;
     }
 
-    export function saveAsMHTML(details: SaveDetails, callback: (mhtmlData?: any) => void): void;
+    export function saveAsMHTML(details: SaveDetails, callback: (mhtmlData: any) => void): void;
 }
 
 ////////////////////
@@ -1490,6 +1490,8 @@ declare module chrome.runtime {
     var onStartup: RuntimeStartupEvent;
     var onInstalled: RuntimeInstalledEvent;
     var onSuspendCanceled: RuntimeSuspendCanceledEvent;
+    var sendMessage:(req:any, cb:(resp:any)=>void)=>void;
+
 }
 
 ////////////////////
