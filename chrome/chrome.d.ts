@@ -1061,7 +1061,7 @@ declare module chrome.history {
 // Identity
 ////////////////////
 declare module chrome.identity {
-    var getAuthToken: (options:all, cb:(token:{})=>void)=>void;
+    var getAuthToken: (options:any, cb:(token:{})=>void)=>void;
 }
 
 
