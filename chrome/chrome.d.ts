@@ -1481,6 +1481,9 @@ declare module chrome.runtime {
     interface RuntimeSuspendCanceledEvent extends chrome.events.Event {
         addListener(callback: Function): void;
     }
+    interface RuntimeMessageEvent extends chrome.events.Event {
+        addListener(callback: Function): void;
+    }
     
     export function getBackgroundPage(callback: (backgroundPage?: Window) => void): void;
     export function getManifest(): Object;
